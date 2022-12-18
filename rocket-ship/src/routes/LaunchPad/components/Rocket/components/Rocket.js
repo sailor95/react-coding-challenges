@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react'
+import React, { useState, PureComponent } from 'react'
 import RocketCore from './RocketCore'
 
 export const FunctionalRocket = React.memo(() => {
@@ -7,7 +7,7 @@ export const FunctionalRocket = React.memo(() => {
   return <RocketCore initialLaunchTime={initialLaunchTime} />
 })
 
-export class ClassRocket extends Component {
+export class ClassRocket extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -16,9 +16,10 @@ export class ClassRocket extends Component {
     }
   }
 
-  shouldComponentUpdate(nextProps) {
-    if (nextProps === this.props) return false
-  }
+  // NOTE: For extends
+  // shouldComponentUpdate(nextProps) {
+  //   if (nextProps === this.props) return false
+  // }
 
   render() {
     const { initialLaunchTime } = this.state

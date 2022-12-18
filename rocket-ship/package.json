@@ -2,7 +2,7 @@
   "name": "rocket-ship",
   "version": "1.0.0",
   "engines": {
-    "node" : ">= 15.0.0"
+    "node": ">= 15.0.0"
   },
   "dependencies": {
     "sass": "^1.43.4",
